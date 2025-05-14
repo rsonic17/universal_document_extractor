@@ -1,0 +1,6 @@
+Flask
+boto3
+easyocr
+Pillow
+pdf2image
+python-dotenv

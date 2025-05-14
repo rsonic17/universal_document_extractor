@@ -1,0 +1,49 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Universal Document Extractor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <h1>Universal Document Extractor</h1>
+
+  <div class="action-buttons">
+    <input type="file" id="fileInput" />
+    <button id="extractBtn">Extract</button>
+    <button id="resetBtn">Reset</button>
+    <button id="downloadBtn">Download JSON</button>
+  </div>
+
+  <div class="prompt-box">
+    <input type="text" id="customPrompt" placeholder="Enter custom prompt for specific fields..." />
+    <button id="customPromptBtn">Submit Prompt</button>
+    <div class="timing">
+      OCR: <span id="ocrTimer">--</span>s |
+      LLM: <span id="llmTimer">--</span>s
+    </div>
+  </div>
+
+  <div class="panel-row">
+    <div class="panel">
+      <h2>Document Preview</h2>
+      <div id="preview">No file selected.</div>
+    </div>
+
+    <div class="panel">
+      <h2>Raw OCR Output</h2>
+      <pre id="ocrText">(Waiting for OCR...)</pre>
+    </div>
+
+    <div class="panel">
+      <h2>Extracted JSON</h2>
+      <pre id="jsonOutput">{}</pre>
+    </div>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
